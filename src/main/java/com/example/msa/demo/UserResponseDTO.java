@@ -4,6 +4,15 @@ public class UserResponseDTO {
     private String name;
     private String fullName;
 
+    public boolean isAdmin() {
+        return isAdmin;
+    }
+
+    public void setAdmin(boolean admin) {
+        isAdmin = admin;
+    }
+
+    private boolean isAdmin;
     public boolean isSuccess() {
         return success;
     }
@@ -21,6 +30,7 @@ public class UserResponseDTO {
         setId(userDTO.getId());
         setName(userDTO.getName());
         setSuccess(id!=-1);
+        setAdmin(userDTO.isAdmin());
     }
     public String getName() {
         return name;

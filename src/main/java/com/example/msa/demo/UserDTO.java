@@ -6,6 +6,16 @@ public class UserDTO {
     private String name;
     private int id;
 
+    public boolean isAdmin() {
+        return isAdmin;
+    }
+
+    public void setAdmin(boolean admin) {
+        isAdmin = admin;
+    }
+
+    private boolean isAdmin;
+
     public String getName() {
         return name;
     }

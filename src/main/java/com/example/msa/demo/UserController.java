@@ -1,19 +1,15 @@
 package com.example.msa.demo;
 
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 @RestController
 @CrossOrigin
 
-public class User {
+public class UserController {
 
     public static List<UserDTO> userDTOSet ;
     static {
@@ -22,6 +18,7 @@ public class User {
         u1.setId(0);
         u1.setName("ali");
         u1.setPassword("ali");
+        u1.setAdmin(true);
         userDTOSet.add(u1);
     }
     @RequestMapping(value = "/login", method = RequestMethod.POST)
